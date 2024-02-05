@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-  <title>ArcGIS Developers Guide: Display a map (2D)</title>
+  <title>ArcGIS Maps SDK for JavaScript Totorials: Display a map </title>
   
   <style>
     html,
@@ -16,15 +16,15 @@
     }
   </style>
 
-  <link rel="stylesheet" href="https://js.arcgis.com/4.19/esri/themes/light/main.css">
-  <script src="https://js.arcgis.com/4.19/"></script>
+  <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
+  <script src="https://js.arcgis.com/4.28/"></script>
 
   <script>
     require(["esri/config", "esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
 
       esriConfig.apiKey = "<AAPK9755276475124b62a9f18406bf9df053hT1BVy_sI_pyn3-Zjhv9M5KCtQ8BrSpmKDeT-PiRoiPBawcrUQc9fRc8mXjikJD->";
       const map = new Map({
-        basemap: "arcgis-topographic" // Basemap layer
+        basemap: "arcgis/topographic" // Basemap styles service
       });
 
       const view = new MapView({
