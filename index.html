@@ -19,27 +19,33 @@
     <script srs="https://js.arcgis.com/4.28/"></script>"
 
     <script>
-      require(["esri/config", "esri/Map", "esri/veiws/MapView"], function(esriConfig, Map, MapView) {
+      require([
+        "esri/config",
+        "esri/Map",
+        "esri/veiws/MapView"
+      ], function(esriConfig,Map, MapView) {
 
         esriConfig.apiKey = "AAPK9755276475124b62a9f18406bf9df053hT1BVy_sI_pyn3-Zjhv9M5KCtQ8BrSpmKDeT-PiRoiPBawcrUQc9fRc8mXjikJD-";
-
-        const map = new Map({
-          basemap: "arcgis/topographic" //basemap styles service
-        });
-
-        const view = new MapView({
-          map: map,
-          center: [-118.805, 34.027], //Longitube, Latitude
-          zoom: 13, // Zoom level
-          container: "viewDiv" //Div element
-        });
-
+      const map = new Map({
+        basemap: "arcgis-topographic" // Basemap layer
       });
-    </script>
 
+      const view = new MapView({
+        map: map,
+        center: [-118.805, 34.027],
+        zoom: 13, // scale: 72223.819286
+        container: "viewDiv",
+        constraints: {
+          snapToZoom: false
+        }
+      });
 
-  </head>
-  <body>
-    <div id="viewDiv"></div>
-  </body>
+    });
+  </script>
+</head>
+
+<body>
+  <div id="viewDiv"></div>
+</body>
+
 </html>
