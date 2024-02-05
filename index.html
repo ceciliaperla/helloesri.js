@@ -1,8 +1,8 @@
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>ArcGIS Maps SDK for JavaScript Tutorials: Display a map</title>
+    <meta charset=""utf-8" />
+    <meta name="viewport" content=""initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title> ArcGIS Maps SDK for JavaScript Tutorials: Display a map</title>
 
     <style>
       html,
@@ -16,23 +16,28 @@
     </style>
 
     <link rel="stylesheet" href="https://js.arcgis.com/4.28/esri/themes/light/main.css">
-    <script src="https://js.arcgis.com/4.28/"></script>
-    <script>
-        require(["esri/config", "esri/Map", "esri/views/MapView"], function(esriConfig, Map, MapView) {
-            esriConfig.apiKey = "AAPK9755276475124b62a9f18406bf9df053hT1BVy_sI_pyn3-Zjhv9M5KCtQ8BrSpmKDeT-PiRoiPBawcrUQc9fRc8mXjikJD-";
+    <script srs="https://js.arcgis.com/4.28/"></script>"
 
-            const map = new Map({
-             basemap: "arcgis/topographic" // basemap styles service
-            });       
-         const view = new MapView({
+    <script>
+      require(["esri/config", "esri/Map", "esri/veiws/MapView"], function(esriConfig, Map, MapView) {
+
+        esriConfig.apiKey = "AAPK9755276475124b62a9f18406bf9df053hT1BVy_sI_pyn3-Zjhv9M5KCtQ8BrSpmKDeT-PiRoiPBawcrUQc9fRc8mXjikJD-";
+
+        const map = new Map({
+          basemap: "arcgis/topographic" //basemap styles service
+        });
+
+        const view = new MapView({
           map: map,
-          center: [-118.805, 34.027], // Longitude, latitude
+          center: [-118.805, 34.027], //Longitube, Latitude
           zoom: 13, // Zoom level
-          container: "viewDiv" // Div element
+          container: "viewDiv" //Div element
         });
-        });
-      </script>
-      
+
+      });
+    </script>
+
+
   </head>
   <body>
     <div id="viewDiv"></div>
